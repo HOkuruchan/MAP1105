@@ -1,0 +1,136 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/map_LinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MapsActivity"
+    tools:ignore="MergeRootFrame"
+    android:weightSum="1">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/button_group_list"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:background="#80000000"
+                android:padding="2dp">
+
+                <RadioButton
+                    android:id="@+id/genzaiti"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="現在地"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_weight="1"
+                    android:background="#000dff"
+                    android:textColor="#fff"
+                    android:checked="false" />
+
+                <View
+                    android:id="@+id/VerticalLine"
+                    android:layout_width="1dip"
+                    android:layout_height="match_parent"
+                    android:background="#aaa" />
+
+                <RadioButton
+                    android:id="@+id/annai"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="ルート案内"
+                    android:layout_weight="1"
+                    android:background="#00ff00"
+                    android:textColor="#fff" />
+
+
+                <View
+                    android:id="@+id/VerticalLine"
+                    android:layout_width="1dip"
+                    android:layout_height="match_parent"
+                    android:background="#aaa" />
+
+                <Button
+                    android:id="@+id/syasin"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="写真変更"
+                    android:layout_weight="1"
+                    android:background="#ffff00"
+                    android:textColor="#000" />
+
+                <View
+                    android:id="@+id/VerticalLine"
+                    android:layout_width="1dip"
+                    android:layout_height="match_parent"
+                    android:background="#aaa" />
+
+                <RadioButton
+                    android:id="@+id/server"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="サーバ通信"
+                    android:layout_weight="1"
+                    android:background="#ff0000"
+                    android:textColor="#000" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:background="#80000000"
+                android:padding="1dp">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText1"
+                    android:layout_weight="1"
+                    android:gravity="clip_vertical"
+                    android:textColor="#fff">
+                </EditText>>
+                <Button
+                    android:id="@+id/search"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="検索"
+                    android:background="#ffffff"
+                    android:textColor="#000">
+                </Button>
+            </RadioGroup>>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/list_item"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
